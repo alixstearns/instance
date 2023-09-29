@@ -9,7 +9,6 @@ resource "aws_lightsail_instance" "alix1" {
     sudo yum install unzip wget httpd -y
     sudo wget https://github.com/utrains/static-resume/archive/refs/heads/main.zip
     sudo unzip main.zip
-    sudo rm -rf /var/www/html/*
     sudo cp -r static-resume-main/iPortfolio/* /usr/local/apache2/htdocs
     sudo systemctl start httpd
     sudo systemctl enable httpd
